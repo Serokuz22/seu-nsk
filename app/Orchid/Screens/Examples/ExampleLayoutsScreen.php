@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Orchid\Screens\Examples;
 
 use Orchid\Screen\Action;

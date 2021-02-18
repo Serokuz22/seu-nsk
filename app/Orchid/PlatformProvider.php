@@ -25,7 +25,20 @@ class PlatformProvider extends OrchidServiceProvider
      */
     public function registerMainMenu(): array
     {
+
         return [
+            ItemMenu::label('Страницы')
+                ->icon('monitor')
+                ->route('platform.contentpage.list')
+                ->title('Navigation'),
+            ItemMenu::label('Статьи')
+                ->icon('monitor')
+                ->route('platform.article.list'),
+            ItemMenu::label('Цены')
+                ->icon('monitor')
+                ->route('platform.price.list'),
+
+/*
             ItemMenu::label('Example screen')
                 ->icon('monitor')
                 ->route('platform.example')
@@ -77,6 +90,7 @@ class PlatformProvider extends OrchidServiceProvider
                 ->title('Docs')
                 ->icon('docs')
                 ->url('https://orchid.software/en/docs'),
+*/
         ];
     }
 

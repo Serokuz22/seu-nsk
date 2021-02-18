@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use DateTimeInterface;
@@ -7,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Orchid\Screen\AsSource;
 
-class ContentPage extends Model
+class Article extends Model
 {
     use HasFactory;
     use SoftDeletes;
@@ -16,6 +17,7 @@ class ContentPage extends Model
     protected $fillable = [
         'user_id',
         'slug',
+        'preview',
         'title',
         'head',
         'excerpt',
@@ -24,6 +26,20 @@ class ContentPage extends Model
         'description',
         'is_published',
         'published_at',
+    ];
+
+    protected $casts = [
+        'user_id'  => 'integer',
+        'slug'  => 'string',
+        'preview'  => 'string',
+        'title'  => 'string',
+        'head'  => 'string',
+        'excerpt'  => 'string',
+        'content'  => 'string',
+        'keywords'  => 'string',
+        'description'  => 'string',
+        'is_published' => 'boolean',
+        'published_at' => 'datetime:Y-m-d H:i:s',
     ];
 
     /**

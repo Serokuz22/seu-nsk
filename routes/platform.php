@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+use App\Orchid\Screens\ArticleEditScreen;
+use App\Orchid\Screens\ArticleListScreen;
+use App\Orchid\Screens\ContentPageEditScreen;
+use App\Orchid\Screens\ContentPageListScreen;
 use App\Orchid\Screens\Examples\ExampleCardsScreen;
 use App\Orchid\Screens\Examples\ExampleChartsScreen;
 use App\Orchid\Screens\Examples\ExampleFieldsAdvancedScreen;
@@ -28,6 +32,25 @@ use Tabuna\Breadcrumbs\Trail;
 | contains the need "dashboard" middleware group. Now create something great!
 |
 */
+
+
+
+Route::screen('contentpage/{page?}', ContentPageEditScreen::class)
+    ->name('platform.contentpage.edit');
+
+Route::screen('contentpages', ContentPageListScreen::class)
+    ->name('platform.contentpage.list');
+
+Route::screen('article/{page?}', ArticleEditScreen::class)
+    ->name('platform.article.edit');
+Route::screen('articles', ArticleListScreen::class)
+    ->name('platform.article.list');
+Route::screen('price/{price?}', \App\Orchid\Screens\PriceEditScreen::class)
+    ->name('platform.price.edit');
+Route::screen('prices', \App\Orchid\Screens\PriceListScreen::class)
+    ->name('platform.price.list');
+
+
 
 // Main
 Route::screen('/main', PlatformScreen::class)
