@@ -30,13 +30,19 @@ class PlatformProvider extends OrchidServiceProvider
             ItemMenu::label('Страницы')
                 ->icon('monitor')
                 ->route('platform.contentpage.list')
-                ->title('Navigation'),
+                ->title('Разделы'),
             ItemMenu::label('Статьи')
                 ->icon('monitor')
                 ->route('platform.article.list'),
             ItemMenu::label('Цены')
                 ->icon('monitor')
                 ->route('platform.price.list'),
+            ItemMenu::label('Баннеры')
+                ->icon('monitor')
+                ->route('platform.banner.list'),
+            ItemMenu::label('Настройки')
+                ->icon('monitor')
+                ->route('platform.option.edit'),
 
 /*
             ItemMenu::label('Example screen')
@@ -119,7 +125,7 @@ class PlatformProvider extends OrchidServiceProvider
                 ->permission('platform.systems.index')
                 ->sort(1000),
 
-            ItemMenu::label(__('Users'))
+            ItemMenu::label(__('Пользователи'))
                 ->place('Auth')
                 ->icon('user')
                 ->route('platform.systems.users')
@@ -127,7 +133,7 @@ class PlatformProvider extends OrchidServiceProvider
                 ->sort(1000)
                 ->title(__('All registered users')),
 
-            ItemMenu::label(__('Roles'))
+            ItemMenu::label(__('Роли'))
                 ->place('Auth')
                 ->icon('lock')
                 ->route('platform.systems.roles')

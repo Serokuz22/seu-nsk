@@ -50,6 +50,14 @@ Route::screen('price/{price?}', \App\Orchid\Screens\PriceEditScreen::class)
 Route::screen('prices', \App\Orchid\Screens\PriceListScreen::class)
     ->name('platform.price.list');
 
+Route::screen('option', \App\Orchid\Screens\OptionSenderScreen::class)
+    ->name('platform.option.edit');
+
+Route::screen('banner/{banner?}', \App\Orchid\Screens\BannerEditScreen::class)
+    ->name('platform.banner.edit');
+Route::screen('banners', \App\Orchid\Screens\BannerListScreen::class)
+    ->name('platform.banner.list');
+
 
 
 // Main
@@ -119,11 +127,11 @@ Route::screen('example', ExampleScreen::class)
             ->push(__('Example screen'));
     });
 
-Route::screen('example-fields', ExampleFieldsScreen::class)->name('platform.example.fields');
-Route::screen('example-layouts', ExampleLayoutsScreen::class)->name('platform.example.layouts');
-Route::screen('example-charts', ExampleChartsScreen::class)->name('platform.example.charts');
-Route::screen('example-editors', ExampleTextEditorsScreen::class)->name('platform.example.editors');
-Route::screen('example-cards', ExampleCardsScreen::class)->name('platform.example.cards');
-Route::screen('example-advanced', ExampleFieldsAdvancedScreen::class)->name('platform.example.advanced');
+//Route::screen('example-fields', ExampleFieldsScreen::class)->name('platform.example.fields');
+//Route::screen('example-layouts', ExampleLayoutsScreen::class)->name('platform.example.layouts');
+//Route::screen('example-charts', ExampleChartsScreen::class)->name('platform.example.charts');
+//Route::screen('example-editors', ExampleTextEditorsScreen::class)->name('platform.example.editors');
+//Route::screen('example-cards', ExampleCardsScreen::class)->name('platform.example.cards');
+//Route::screen('example-advanced', ExampleFieldsAdvancedScreen::class)->name('platform.example.advanced');
 
 //Route::screen('idea', 'Idea::class','platform.screens.idea');

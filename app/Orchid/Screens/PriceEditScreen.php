@@ -100,6 +100,8 @@ class PriceEditScreen extends Screen
                         ->help(''),
                     Input::make('price.position')
                         ->title('Позиция')
+                        ->type('number')
+                        ->value(0)
                         ->placeholder('')
                         ->help(''),
                 ]),

@@ -104,6 +104,7 @@ class ContentPageEditScreen extends Screen
                             ->placeholder('Brief description for preview'),
 
                         Quill::make('post.content')
+                            ->toolbar(["text", "color", "header", "list", "format", "media"])
                             ->title('Страница'),
                     ]),
                 'SEO' => Layout::rows([
