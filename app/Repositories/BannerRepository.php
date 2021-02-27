@@ -12,11 +12,11 @@ class BannerRepository extends CoreRepository
 
     /**
      * Все баннеры
-     * @return Model
+     * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function getBanners() : Model
+    public function getBanners() : \Illuminate\Database\Eloquent\Collection
     {
-        $this->startConditions()
+        return $this->startConditions()
             ->orderBy('position')
             ->get();
     }

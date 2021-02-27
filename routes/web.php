@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('/', [\App\Http\Controllers\IndexController::class, 'index']);
+
+Route::get('/article', [\App\Http\Controllers\ArticleController::class, 'index'])->name('article.index');
+Route::get('/article/{slug}', [\App\Http\Controllers\ArticleController::class, 'show'])->name('article.show');
 
 include_once 'pages.php';
